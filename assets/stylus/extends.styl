@@ -1,0 +1,62 @@
+@import "./mixins"
+@import "./variables"
+
+Blue = #0082D2
+DarkBlue = #3d70b2
+.btn-seed
+	animate()
+	position relative
+	display inline-block
+	cursor pointer
+
+.btn-default
+	@extend .btn-seed
+	padding 0.4em 1.5em
+	border-radius 5px
+	border none
+	background-color Blue
+	color white
+	&:hover
+		background-color DarkBlue
+	&.disabled
+		background-color #ddd
+		color #aaa
+		
+.tableDefault
+	tr
+		border-top 1px solid BaseBorder
+		&:last-child
+			border-bottom 1px solid BaseBorder
+	th, td
+		color RegularText
+		padding 15px 15px
+	th
+		background-color ModuleBackground
+		font-weight bold
+		min-width 13em
+	td
+		padding-left 30px
+
+.headingBorder
+	position relative
+	padding-top 20px
+	padding-bottom 15px
+	border-bottom 1px solid LightBorder
+	margin-bottom 25px
+	font-size MediumSize
+	font-weight bold
+	&:after
+		position absolute
+		left 0
+		bottom -1px
+		content ""
+		width 50px
+		height 1px
+		background-color Blue
+
+.headingBorderSmall
+	border-bottom 1px solid LightBorder
+	padding-top 15px
+	padding-bottom 10px
+	margin-bottom 15px
+	font-weight bold

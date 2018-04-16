@@ -1,0 +1,57 @@
+@import "./mixins"
+@import "./extends"
+@import "./variables"
+
+.l-centering
+	centering(LargeWindow)
+
+.l-horizontal
+	width 100%
+	flexbox()
+	justify-content space-between
+	align-items flex-start
+	&.justifyRight
+		justify-content flex-end
+	&.alignCenter
+		align-items center
+	&.alignBottom
+		align-items flex-end
+		
+.l-column
+	&:not(:last-child)
+		padding-right 20px
+	&:not(:first-child)
+		padding-left 20px
+	&.l-primary
+		width 25%
+	&.l-secondary
+		width 75%
+		
+.l-line
+	&:not(:last-child)
+		margin-bottom 4em
+	
+.block-panel
+	padding 30px
+	background-color ModuleBackground
+
+.page
+	.pc
+		h2
+			@extend .headingBorder
+		h3
+			@extend .headingBorderSmall
+.huge
+	font-size HugeSize
+.xlarge
+	font-size ExtraLargeSize
+.large
+	font-size LargeSize
+.meduim
+	font-size MediumSize
+.regular
+	font-size RegularSize
+.small
+	font-size SmallSize
+.xsmall
+	font-size ExtraSmallSize

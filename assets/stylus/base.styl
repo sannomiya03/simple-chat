@@ -1,0 +1,33 @@
+@import "./colors"
+@import "./variables"
+@import "./mixins"
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css)
+
+html
+	font-size ROOT_FONTSIZE
+	+min-screen(Large)
+		font-size ROOT_FONTSIZE
+body, h1, h2, h3, h4, h5, h6, p, a, span, li, table, tr, td, th, dl, dt, dd, input
+	font-family 'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'Meiryo', 'メイリオ', 'Noto Sans Japanese', 'Hiragino Kaku Gothic Pro', sans-serif
+	color TEXT!default
+p
+	line-height 1.75em
+a
+	animate(.15)
+	text-decoration none
+	color Blue
+	&:hover
+		color DarkBlue
+
+*
+	webkit-box-sizing border-box
+	-moz-box-sizing border-box
+	-o-box-sizing border-box
+	-ms-box-sizing border-box
+	box-sizing border-box
+
+img
+	max-width 100%
+
+.alert
+	color ALERT!important
